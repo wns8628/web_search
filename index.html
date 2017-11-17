@@ -16,22 +16,39 @@
       </div>
     </center>
 
-    <!-- 설명부분  -->
     <center>
-      <div class="alert alert-success" id="ex">
-        <strong> * 참고) 총 5 명
-        <br> ( 교수님(이강혁)1명, 김세준2명, 박광덕1명, 김상욱1명 ) </strong>
+    <div class="alert alert-success" id="ex1">
+      <strong> * 참고) 총 5 명 </strong>
+      <br> ( 교수님(이강혁)1명, 김세준2명, 박광덕1명, 김상욱1명 )
+    </div>
+    </center>
+
+    <!-- 설명부분  -->
+
+  <div id ="help">
+    <div id = "help1">
+      <div class="alert alert-info" role="alert" id = "ex2">
+        <strong> * 동명이인기능 </strong>
+        <br /> 예) 이름이같은사람이 2명이있으면 2명을 찾아서보여줍니다.
       </div>
       <div class="alert alert-info" role="alert" id = "ex2">
-        <strong> * 동명이인기능 <br> ( 예를들어 이름이같은사람이 2명이있으면 2명을 찾아서보여줍니다. )<strong>
+        <strong> * 상세검색기능<sup style="color :red">(new)</sup> </strong>
+        <br /> ( 전체검색,이름,직업,주소,전공,휴대폰,이메일 )
       </div>
-      <div class="alert alert-danger" role="alert" id = "ex2">
-         * 호환성 문제<br> 파이어폭스,IE로 실행권장 (크롬에서는 동작이 안됩니다.)</br>
-         ** IE로 파일을 실행시 반드시 "ActiveX 허용" 해야 동작
+      <div class="alert alert-info" role="alert" id = "ex2">
+        <strong> * 부분검색지원<sup style="color :red">(new)</sup> </strong>
+        <br />  예) 주소검색시 "부산" 만 입력해도 검색가능
       </div>
-    </center>
-    <hr>
-
+    </div>
+    <div id = "help2">
+    <div class="alert alert-danger" role="alert" id = "ex3">
+      <strong><br><br>* 호환성 문제 </strong><br /> <strong>파이어폭스,IE 둘다 실행가능!!<sup style="color :red">(new)</sup></strong>
+      <br />(크롬에서는 동작이 안됩니다.)<br />
+      IE로 파일을 실행시 반드시 "ActiveX 허용" 해야 동작
+    </div>
+    </div>
+  </div>
+<hr>
   <!-- 입력부분  센터왜 이런지 몰겠다..-->
         <center>
           <div class="form-inline" id="input">
@@ -40,6 +57,9 @@
               <option id="name" value="name">이름(NAME)</option>
               <option id="title" value="title">직업(TITLE)</option>
               <option id="major" value="major">전공(MAJOR)</option>
+              <option id="address" value="address">주소(ADDRESS)</option>
+              <option id="mobile" value="mobile">휴대폰(MOBILE)</option>
+              <option id="email" value="email">이메일(EMAIL)</option>
               <input  type="text" id="inputName" class="form-control mx-sm-3" placeholder="입력하세요">
               <input type="button" value="검색" class="btn btn-outline-success" onclick="searchStart();">
             </select>

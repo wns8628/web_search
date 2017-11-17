@@ -13,7 +13,13 @@
               alert("그런 직업을 가진사람은 없습니다.");
               }else if(selected == "major"){
                 alert("그런 전공을 가진사람은 없습니다.");
-                }else {
+                }else if(selected == "address"){
+                  alert("그런 주소를 가진사람은 없습니다.");
+                  }else if(selected == "mobile"){
+                    alert("그런 번호를 가진사람은 없습니다.");
+                    }else if(selected == "email"){
+                      alert("그런 이메일을 가진사람은 없습니다.");
+                      }else {
                   alert("그런 정보를 가진 사람을 찾을 수 없습니다.");
                 }
 
@@ -36,13 +42,13 @@
 
       var amindex = 0; //count인덱스값이랑 i랑비교해서 같을때만 인덱스를 증가시킨다.
 
-      for( var i = 0; i < elechileNodes.length ; i++ ){ //0 1 2 3 4 5 돈다
+      for( var i = 0; i < elechileNodes.length ; i++ ){ //0 1 2 3 4 5 돈다  //
 
         if(count[amindex] === i){
           document.writeln( "<table border=1 width=80% align=center>" );
              for ( var i1 = 0; i1 < elechileNodes[i].childNodes.length; i1++ ){
 
-                  if(elechileNodes[i].childNodes.item( i1 ).nodeType != 3){
+                  if(elechileNodes[i].childNodes.item( i1 ).nodeType != 3){    //파이어폭스 호환위해 사용한코드
 
                     var curNode = elechileNodes[i].childNodes.item( i1 );
                     var value = curNode.firstChild;
@@ -56,12 +62,12 @@
                     document.writeln( "</tr>" );
 
                    }
-
                  }
                document.writeln( "</table>" );
                document.writeln( "<hr>" );
                amindex++;
            }
+
          }
        }
 //------------------------------------------------------------------------------
@@ -73,7 +79,7 @@ function searchStart(xml){
    // var xmlDoc = new ActiveXObject( "Microsoft.XMLDOM" ); //액티브엑스
    // xmlDoc.load( "public/resume.xml" );
 
-   var xmlDoc = loadXMLDoc("public/resume.xml");
+   var xmlDoc = loadXMLDoc("public/resume.xml");           //loadxmldoc 수정으로 익스,파폭둘다 실행가능!!
 
    //뿌리가져옴
     var element = xmlDoc.documentElement;
@@ -102,19 +108,30 @@ function searchStart(xml){
           }else if(selected == "major"){
               x = element.getElementsByTagName("MAJOR");
               find = "찾은 전공";
-            }
+            }else if(selected == "address"){
+                x = element.getElementsByTagName("ADDRESS");
+                find = "찾은 주소";
+              }else if(selected == "mobile"){
+                  x = element.getElementsByTagName("MOBILE");
+                  find = "찾은 휴대폰번호";
+                }else if(selected == "email"){
+                    x = element.getElementsByTagName("EMAIL");
+                    find = "찾은 이메일";
+                  }
 
 
-    // console.log(x[9].childNodes.length);
+    var ele = new Array();                                                //파이어폭스 호환위해 넣은코드
+
+    //전체검색로직------------------------------------------------------------------------------
     if(selected == "all"){
-      //전체검색로직--------------------------------------------------
+
       for(var i = 0; i < x.length; i++){  //x.length = 5 // firefox = 11
 
-            if( i >= x.length-1 && i >= 5 ) break;                        //파이어폭스 호환위해 넣은코드
+            if( i >= x.length-1 && i >= 5 ) break;
 
-              var i2 = 0;
+            var i2 = 0;
 
-            if(x[i].nodeType == 3 ){ i++; }                              //파이어폭스 호환위해 넣은코드
+            if(x[i].nodeType == 3 ){ i++; }                                //파이어폭스 호환위해 넣은코드
 
             while(i2 < x[i].childNodes.length){  // firefox = 21
 
@@ -135,12 +152,15 @@ function searchStart(xml){
                if(i >= x.length) break;
              }
            }
-      //-------------------------------------------------------------- //좀더개선하자
+           for(var i4 = 0; i4< element.childNodes.length; i4++){            //파이어폭스 호환위해 넣은코드
+               ele[i4] = element.childNodes[i4];                            //파이어폭스 호환위해 넣은코드
+          }                                                                 //파이어폭스 호환위해 넣은코드
     }
-    //부분검색로직--------------------------------------------------
+    //상세검색로직--------------------------------------------------
     else {
-        for(var i3 = 0 ; i3 < x.length ; i3++){  //x.length = 5 // firefox = 11
-
+        console.log(x.length)
+        for(var i3 = 0 ; i3 < x.length ; i3++){  //x.length = 5 // firefox = 5 왜냐 직접 검색해서 해당하는것만 가져왔으니깐
+              //김세준
           if( inputData  == x[loop].firstChild.nodeValue.match(inputData) ){
 
                count[amIndex] = loop;
@@ -151,15 +171,23 @@ function searchStart(xml){
               loop++;
             }
         }
-    //-------------------------------------------------------------
+
+        var a = 0;                                                              //파이어폭스 호환위해 넣은코드
+        for(var i4 = 0; i4< element.childNodes.length; i4++){                   //파이어폭스 호환위해 넣은코드
+            if(elechileNodes[i4].nodeType != 3){                                //파이어폭스 호환위해 넣은코드
+            ele[a] = element.childNodes[i4];                                    //파이어폭스 호환위해 넣은코드
+            a++;
+          }
+        }
+
+    //-------------------------------------------------------------------------
     }
 
 //유효성 검사
   var check  = vCheck(amIndex,inputData,selected);
 //문제없으면 테이블생성 함수 실행
   if(check == true){  //즉 빈칸도있고 사람도있으면!
-    ShowResume(count,elechileNodes,inputData,find);
-  }
-
+    ShowResume(count,ele,inputData,find);                                        //ele = 부분검색사용시 이력서5개 즉 인덱스5인것을 넣기위해 사용
+  }                                                                               //      전체검색로직시 11개가들어감(nodeType 3 떄문에 ) 하지만 부분검색사용시 5개가 들어가기위해 사용
 }
 //------------------------------------------------------------------------------

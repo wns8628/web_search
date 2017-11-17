@@ -6,9 +6,42 @@
 #main_name {
   margin: 10px;
 }
-#ex , #ex2{
- width: 550px;
-}
 #input {
-  width:530px; height: 70px; padding-left: 20px;
+  width:530px; height: 50px; padding-left: 20px;
+}
+#help {
+ /*height: 280px;*/
+ text-align: center;
+}
+#help1 {
+  display:inline-block;
+  width: 500px;
+  margin-right: 5px;
+  vertical-align: middle;
+  /*float: left;*/
+}
+#help2 {
+  display:inline-block;
+  width: 500px;
+  height: 270px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+#ex1{
+  margin-left: 5px;
+  width: 1000px;
+  text-align: center;
+}
+#ex2{
+  display:inline-block;
+  width: 490px;
+  text-align: center;
+}
+#ex3{
+  display:inline-block;
+  width: 490px;
+  height: 255px;
+  text-align :center;
+  font-size: 18px;
+
 }
