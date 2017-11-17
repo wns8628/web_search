@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="public/style.css">
+    <link href="public/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="public/jquery.js"></script>
+    <title>이력서이름검색</title>
+  </head>
+  <body>
+    <!-- 메인부분  -->
+    <center>
+      <div id="main_name" class="jumbotron">
+        <h2><strong>이력서 다중검색</strong> ver 1.1</h2>
+        <h4>컴퓨터 공학과 12120084 김세준 </h4>
+      </div>
+    </center>
+
+    <!-- 설명부분  -->
+    <center>
+      <div class="alert alert-success" id="ex">
+        <strong> * 참고) 총 5 명
+        <br> ( 교수님(이강혁)1명, 김세준2명, 박광덕1명, 김상욱1명 ) </strong>
+      </div>
+      <div class="alert alert-info" role="alert" id = "ex2">
+        <strong> * 동명이인기능 <br> ( 예를들어 이름이같은사람이 2명이있으면 2명을 찾아서보여줍니다. )<strong>
+      </div>
+      <div class="alert alert-danger" role="alert" id = "ex2">
+         * 호환성 문제<br> 파이어폭스,IE로 실행권장 (크롬에서는 동작이 안됩니다.)</br>
+         ** IE로 파일을 실행시 반드시 "ActiveX 허용" 해야 동작
+      </div>
+    </center>
+    <hr>
+
+  <!-- 입력부분  센터왜 이런지 몰겠다..-->
+        <center>
+          <div class="form-inline" id="input">
+            <select id="select" name="mySelect"class="custom-select mb-2 mr-sm-2 mb-sm-0" for="inputName" >
+              <option id="all" value="all">전체 검색</option>
+              <option id="name" value="name">이름(NAME)</option>
+              <option id="title" value="title">직업(TITLE)</option>
+              <option id="major" value="major">전공(MAJOR)</option>
+              <input  type="text" id="inputName" class="form-control mx-sm-3" placeholder="입력하세요">
+              <input type="button" value="검색" class="btn btn-outline-success" onclick="searchStart();">
+            </select>
+           </div>
+        </center>
+  <!--  -->
+  </body>
+  <!-- 스크립트 js파일 -->
+  <footer>
+     <script type="text/javascript" src="public/resume.js"></script>
+     <script type="text/javascript" src="public/loadxmldoc.js"></script>
+  </footer>
+</html>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resume>
+  <APEC_SATMAN ID= "resume1">
+  	<NAME>이강혁</NAME>
+  	<TITLE>교수</TITLE>
+  	<ADDRESS>608-711 부산시 남구 신선로 428 동명대학교 게임공학과</ADDRESS>
+  	<MAJOR>자연어처리(Natural Language Processing)</MAJOR>
+  	<PHONE>82-51-610-8410</PHONE>
+  	<FAX>82-51-610-8848</FAX>
+  	<MOBILE>010-9909-4830</MOBILE>
+  	<EMAIL>klee@tu.ac.kr</EMAIL>
+  	<HOMEPAGE>http://blog.tu.ac.kr/klee</HOMEPAGE>
+  	<EDU>1993년 University of Illinois at Urbana-Champaign 졸업</EDU>
+  </APEC_SATMAN>
+  <APEC_SATMAN ID= "resume2">
+    <NAME>김세준</NAME>
+    <TITLE>학생</TITLE>
+    <ADDRESS>부산시 해운대구 우2동 동부올림픽타운 113-1303  </ADDRESS>
+    <MAJOR>컴퓨터공학과</MAJOR>
+    <PHONE>010-3428-7675</PHONE>
+    <FAX>없음</FAX>
+    <MOBILE>010-3428-7675</MOBILE>
+    <EMAIL>wns8628@naver.com</EMAIL>
+    <HOMEPAGE>http://blog.tu.ac.kr/klee</HOMEPAGE>
+    <EDU>해운대관광고졸업</EDU>
+  </APEC_SATMAN>
+  <APEC_SATMAN ID= "resume3">
+    <NAME>김세준</NAME>
+    <TITLE>학생</TITLE>
+    <ADDRESS>부산시 해운대구 우2동 동부올림픽타운 110-302 </ADDRESS>
+    <MAJOR>로봇시스템공학</MAJOR>
+    <PHONE>010-3428-7675</PHONE>
+    <FAX>없음</FAX>
+    <MOBILE>010-3428-7675</MOBILE>
+    <EMAIL>wns8628@naver.com</EMAIL>
+    <HOMEPAGE>http://blog.tu.ac.kr/klee</HOMEPAGE>
+    <EDU>해운대관광고졸업</EDU>
+  </APEC_SATMAN>
+  <APEC_SATMAN ID= "resume4">
+    <NAME>박광덕</NAME>
+    <TITLE>학생</TITLE>
+    <ADDRESS>부산시 해운대구 우2동 동부올림픽타운 113-1303  </ADDRESS>
+    <MAJOR>컴퓨터공학과</MAJOR>
+    <PHONE>010-3428-7675</PHONE>
+    <FAX>없음</FAX>
+    <MOBILE>010-3428-7675</MOBILE>
+    <EMAIL>wns8628@naver.com</EMAIL>
+    <HOMEPAGE>http://blog.tu.ac.kr/klee</HOMEPAGE>
+    <EDU>해운대관광고졸업</EDU>
+  </APEC_SATMAN>
+  <APEC_SATMAN ID= "resume5">
+    <NAME>김상욱</NAME>
+    <TITLE>학생</TITLE>
+    <ADDRESS>부산시 해운대구 우2동 동부올림픽타운 113-1303  </ADDRESS>
+    <MAJOR>영미문화학과</MAJOR>
+    <PHONE>010-3428-7675</PHONE>
+    <FAX>없음</FAX>
+    <MOBILE>010-3428-7675</MOBILE>
+    <EMAIL>wns8628@naver.com</EMAIL>
+    <HOMEPAGE>http://blog.tu.ac.kr/klee</HOMEPAGE>
+    <EDU>해운대관광고졸업</EDU>
+  </APEC_SATMAN>
+</resume>

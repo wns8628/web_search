@@ -1,0 +1,14 @@
+*{
+  box-sizing: border-box;
+
+}
+/*--------------------------------------------  */
+#main_name {
+  margin: 10px;
+}
+#ex , #ex2{
+ width: 550px;
+}
+#input {
+  width:530px; height: 70px; padding-left: 20px;
+}
